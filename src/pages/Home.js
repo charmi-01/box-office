@@ -74,8 +74,8 @@ function Home (){
         </RadioInputsWrapper>
         <SearchButtonWrapper>
         <button type="button" onClick={onSearch}>Search</button>
-        {renderResults()}
         </SearchButtonWrapper>
+        {renderResults()}
             
     </MainPageLayout>
   )
