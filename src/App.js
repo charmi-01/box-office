@@ -1,7 +1,8 @@
 import React from "react";
 import {Switch,Route} from 'react-router-dom';
 import Home from "./pages/Home";
-import Start from "./pages/Start";
+import Starred from "./pages/Starred";
+import Show from "./pages/Show";
 
 function App() {
   return (
@@ -10,8 +11,11 @@ function App() {
       <Route exact path="/">
         <Home/> 
       </Route>
-      <Route exact path="/started">
-        <Start/>
+      <Route exact path="/starred">
+        <Starred/>
+      </Route>
+      <Route exact path="/show/:id">
+        <Show/>
       </Route>
       <Route>
         404 NOT FOUND
