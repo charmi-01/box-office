@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{memo}from 'react'
 import { Link } from 'react-router-dom';
 import { StyledShowCard } from './ShowCardStyled';
 import { Star } from '../styled';
@@ -17,7 +17,7 @@ function ShowCard ({id,image,name,summary,onStarClick,isStarred}) {
 
         <div className='btns'>
             <Link to={`/show/${id}`}>Read More</Link>
-            <button type="button" onClick={onStarClick}>
+            <button type="button" onClick={()=>onStarClick(id,isStarred)}>
                 <Star active={isStarred}/></button>
         </div>
 
@@ -25,4 +25,4 @@ function ShowCard ({id,image,name,summary,onStarClick,isStarred}) {
   )
 }
 
-export default ShowCard
+export default memo(ShowCard)

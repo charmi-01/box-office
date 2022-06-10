@@ -1,5 +1,5 @@
 /* eslint-disable react/function-component-definition */
-import React from 'react'
+import React,{memo} from 'react'
 import styled from 'styled-components';
 
 // CustomRadio.js
@@ -67,4 +67,4 @@ const CustomRadio = ({lable,...restProps}) => {
   )
 }
 
-export default CustomRadio
+export default memo(CustomRadio)
